@@ -24,7 +24,11 @@ class UniqueCollection {
 
     /** Clear all items from hte collection */
     fun clear () {
-
+        val pointer = collection.iterator()
+        while (pointer.hasNext()) {
+            pointer.next()
+            pointer.remove()
+        }
     }
 
     /** Return the side of the collection */
